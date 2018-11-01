@@ -1,5 +1,8 @@
 main {
-  background-color: @darkgrey;
+  background: url('../img/storefront.jpg');
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .main__container {
     .container;
@@ -38,7 +41,7 @@ main {
 
 .button-row {
   text-align: center;
-  background-color: @white;
+  background: url('../img/dots.png');
 
   .button-row__container {
     .container;
@@ -73,8 +76,11 @@ main {
         }
 
         >a {
+          border-radius: 10px;
           display: block;
-          background-color: @lightgrey;
+          // background-color: @lightgrey;
+          background: url('../img/leaves-bg.jpg');
+          background-repeat: no-repeat;
           transition: .15s ease-in-out;
           padding: 15px 0;
           @media (min-width: @screen-sm-min) {
@@ -100,6 +106,24 @@ main {
           >p {
             line-height: 2;
             transition: .15s ease-in-out;
+          }
+        }
+
+        &.peach {
+          >a {
+            background-color: #e2649a;
+          }
+        }
+
+        &.gold {
+          >a {
+            background-color: #e9c77b;
+          }
+        }
+
+        &.blue {
+          >a {
+            background-color: #c4d4e0;
           }
         }
       }
@@ -145,10 +169,13 @@ main {
         padding: 60px;
       }
 
-      >p {}
+      >img {
+        max-width: 250px;
+      }
     }
 
     .content-row__text {
+      text-align: center;
       flex: 1 1 50%;
       padding: 15px;
       display: flex;
@@ -163,10 +190,22 @@ main {
       }
 
       >h2 {
-        margin-bottom: 15px;
+        margin-bottom: 30px;
+        font-size: 48px;
+        @media (min-width: @screen-sm-min) {
+          font-size: 60px;
+        }
       }
 
-      >p {}
+      >p {
+        line-height: 20px;
+        max-width: 400px;
+        @media (min-width: @screen-sm-min) {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 auto;
+        }
+      }
     }
   }
 }

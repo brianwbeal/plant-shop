@@ -168,7 +168,7 @@ header .header__container {
 .header__nav .header__nav--button:active,
 .header__nav .header__nav--button:focus {
   cursor: pointer;
-  background-color: #9e9e9e;
+  background-color: #c4d4e0;
 }
 .header__nav .header__nav--button > span {
   background-color: #000000;
@@ -203,7 +203,7 @@ header .header__container {
 @media (min-width: 768px) {
   .header__nav nav > ul > li > a {
     display: inline-block;
-    width: 50px;
+    padding: 0 15px;
   }
 }
 .header__nav nav > ul > li > a:hover,
@@ -212,7 +212,10 @@ header .header__container {
   background-color: #9e9e9e;
 }
 main {
-  background-color: #424242;
+  background: url('../img/storefront.jpg');
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 main .main__container {
   display: block;
@@ -273,7 +276,7 @@ main .main__container > a:focus {
 }
 .button-row {
   text-align: center;
-  background-color: #ffffff;
+  background: url('../img/dots.png');
 }
 .button-row .button-row__container {
   display: block;
@@ -329,8 +332,10 @@ main .main__container > a:focus {
   align-self: stretch;
 }
 .button-row .button-row__container > ul > .button-row__button > a {
+  border-radius: 10px;
   display: block;
-  background-color: #eeeeee;
+  background: url('../img/leaves-bg.jpg');
+  background-repeat: no-repeat;
   transition: 0.15s ease-in-out;
   padding: 15px 0;
 }
@@ -366,6 +371,15 @@ main .main__container > a:focus {
 .button-row .button-row__container > ul > .button-row__button > a > p {
   line-height: 2;
   transition: 0.15s ease-in-out;
+}
+.button-row .button-row__container > ul > .button-row__button.peach > a {
+  background-color: #e2649a;
+}
+.button-row .button-row__container > ul > .button-row__button.gold > a {
+  background-color: #e9c77b;
+}
+.button-row .button-row__container > ul > .button-row__button.blue > a {
+  background-color: #c4d4e0;
 }
 .content-row {
   background-color: #9e9e9e;
@@ -428,7 +442,11 @@ main .main__container > a:focus {
     padding: 60px;
   }
 }
+.content-row .content-row__container .content-row__image > img {
+  max-width: 250px;
+}
 .content-row .content-row__container .content-row__text {
+  text-align: center;
   flex: 1 1 50%;
   padding: 15px;
   display: flex;
@@ -447,7 +465,24 @@ main .main__container > a:focus {
   }
 }
 .content-row .content-row__container .content-row__text > h2 {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  font-size: 48px;
+}
+@media (min-width: 768px) {
+  .content-row .content-row__container .content-row__text > h2 {
+    font-size: 60px;
+  }
+}
+.content-row .content-row__container .content-row__text > p {
+  line-height: 20px;
+  max-width: 400px;
+}
+@media (min-width: 768px) {
+  .content-row .content-row__container .content-row__text > p {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 footer {
   background-color: #000000;
